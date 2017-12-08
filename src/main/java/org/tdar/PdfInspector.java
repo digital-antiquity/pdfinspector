@@ -64,7 +64,7 @@ public class PdfInspector {
                     hasLayers = -100;
                 }
             }
-            logger.debug("{}\tlayers:\t{}", file.getName(), names);
+            System.out.println(String.format"%s\tlayers:\t%s", file.getName(), names));
             hasLayers = names.size();
         }
         // http://www.javased.com/?api=org.apache.pdfbox.pdmodel.PDDocumentCatalog
@@ -73,11 +73,11 @@ public class PdfInspector {
             PDEmbeddedFilesNameTreeNode embeddedFiles = names.getEmbeddedFiles();
             if (embeddedFiles != null && embeddedFiles.getNames() != null) {
                 hasEmbeddedFiles = true;
-                logger.debug("{}\tfiles:\t{}", file.getName(), embeddedFiles.getNames().keySet());
+                System.out.println(String.format("%s\tfiles:\t%s", file.getName(), embeddedFiles.getNames().keySet()));
             }
         }
         document.getDocumentInformation().getCreator();
-        logger.debug("{}\t{}\t{}\t{}\t{}", file.getName(), document.getVersion(), hasEmbeddedFiles, hasForm, hasLayers);
+        System.out.println(String.format("%s\t%s\t%s\t%s\t%s", file.getName(), document.getVersion(), hasEmbeddedFiles, hasForm, hasLayers));
 
     }
 
@@ -90,6 +90,7 @@ public class PdfInspector {
             files.add(file);
         }
         PdfInspector inspect = new PdfInspector();
+        System.out.println("File\tPDF Version\tHas Embedded Files\tHas Forms\tHas Layers");
         for (File f : files) {
             try {
                 inspect.inspect(f);
