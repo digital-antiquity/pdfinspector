@@ -64,7 +64,7 @@ public class PdfInspector {
                     hasLayers = -100;
                 }
             }
-            System.out.println(String.format"%s\tlayers:\t%s", file.getName(), names));
+            System.out.println(String.format("%s\tlayers:\t%s", file.getName(), names));
             hasLayers = names.size();
         }
         // http://www.javased.com/?api=org.apache.pdfbox.pdmodel.PDDocumentCatalog

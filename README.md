@@ -6,4 +6,4 @@ A quick app that takes a directory of PDFs (or a single PDF) and lists out info 
 * Layers
 * Forms
 
-`git pull ; mvn clean compile -Prunpdf  -Dexec.args="/{path-to-pdfs}/" > ~/pdfstats.txt `
+`git pull ; mvn clean compile -Pinspect  -Dexec.args="/{path-to-pdfs}/" > ~/pdfstats.txt `
